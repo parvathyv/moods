@@ -14,7 +14,7 @@ end
 get '/' do
   @arr = []	
   @user_name = User.name
-  arr << [@user_name]
+  @arr << [@user_name]
   @user_moods = UserMoods.all
   @user_moods.map{|moodobject| @arr << [moodobject.comments]}
   binding.pry

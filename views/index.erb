@@ -123,26 +123,8 @@
   </footer>
     
   <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script type="text/javascript">
-      google.load("visualization", "1.1", {packages:["wordtree"]});
-      google.setOnLoadCallback(drawChart);
-
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable(
-          comments_array
-        );
-
-        var options = {
-          wordtree: {
-            format: 'implicit',
-            word: name
-          }
-        };
-
-        var chart = new google.visualization.WordTree(document.getElementById('wordtree_basic'));
-        chart.draw(data, options);
-      }
-    </script>
+   <script type="text/javascript" src="js/wordtree.js"></script>
+ 
 
    <div id="wordtree_basic" style="width: 900px; height: 500px;margin-left:auto;margin-right:auto"></div>
    
