@@ -1,19 +1,11 @@
+begin
 contact_attributes = [
-  { name: 'Eric', description: 'Kelly', instructions: '1234567890' },
-  { name: 'Eric', description: 'Kelly', instructions: '1234567890' } ]
+  { user_id: 1, email: 'paro_v@yahoo.com', provider: 'yahoo', name :'Parvathy'} ]
  
 
 contact_attributes.each do |attributes|
-  contact = Recipe.new(attributes)
-  contact.save
+  user = User.new(attributes)
+  user.save
 end
 
-ingredient_attributes = [
-  { name: 'Eric', recipe_id: '1234567890' },
-  { name: 'Eric', recipe_id: '1234567890' } ]
- 
-
-ingredient_attributes.each do |attributes|
-  contact = Ingredient.new(attributes)
-  contact.save
 end

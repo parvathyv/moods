@@ -2,7 +2,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: recipes_development
+  database: moods
   pool: 5
   username:
   password:

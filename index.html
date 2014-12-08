@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html class="no-js" lang="en">
   <head>
@@ -12,13 +11,8 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
   </head>
   <body>
-    <script type="text/javascript">
-      var comments_array = <%= @arr.inspect %>
-      var name = <%= @arr.first%>
-     
-    </script>
 
-     <div class="row">
+   <div class="row">
   <div class="large-12 columns">
  
      
@@ -42,31 +36,34 @@
   </div>
   </div>
   </div><br>
-   <form action="/" method="post">
+ 
   <div class="row">
     <div class="large-12 columns">
       <div class="row">
  
-    
+     
  
         <div class="large-3 small-6 columns">
           <img src="http://placehold.it/250x250&text=Thumbnail"/>
-        <input type="checkbox" value="Happy" name="happy"><label for="happy">Happy</label>
+          <h6 class="panel">Description</h6>
         </div>
  
         <div class="large-3 small-6 columns">
           <img src="http://placehold.it/250x250&text=Thumbnail"/>
-         <input type="checkbox" value="Sad" name="sad"><label for="sad">Sad</label>
+          <h6 class="panel">Description</h6>
         </div>
  
         <div class="large-3 small-6 columns">
           <img src="http://placehold.it/250x250&text=Thumbnail"/>
-          <input type="checkbox" value="Crazy" name="crazy"><label for="crazy">Crazy</label>
+          <h6 class="panel">Description</h6>
         </div>
-        
+ 
         <div class="large-3 small-6 columns">
           <img src="http://placehold.it/250x250&text=Thumbnail"/>
-          <input type="checkbox" value="Zen" name="zen"><label for="zen">Zen</label>
+          <div>&nbsp</div>
+         <a class="large button expand" href="#" style ="margin:auto;background-color:#265F8E;height:2em;text-align:center;vertical-align:center;font-family:Oswald">
+            HAPPY!
+          </a>
         </div>
  
      
@@ -81,29 +78,22 @@
  
      
 
-  
-  <div>&nbsp</div>       
-  
-  <div class="row">
-    <div class="large-12 columns">
-       <label style ="font-size:1.5em">Name..
-        <input type="text" placeholder="Parvathy" />
-      </label>
-    </div>
-  </div>
-  <div class="row">
-    <div class="large-12 columns">
-       <label style ="font-size:1.5em">I feel..
-        <input name ="comments" type="text" placeholder="like today is the day.." />
-      </label>
-    </div>
-  </div>
+         
  
-      <div class ="input_button">
-      <input type="submit" value = "MOOD IT !" id="submit_button"/>
-    </div>
  
-     </form>
+          <div class="large-4 columns hide-for-small">
+ 
+          <h4></h4><hr/>
+ 
+         
+          <a class="large button expand" href="#" style ="margin-left:100%;margin-right:auto;background-color:#ED197B;font-family:Oswald;border:0px 0px 0px 0px">
+            MOOD IT !
+          </a>
+ 
+ 
+        </div>
+ 
+     
  
       </div>
   
@@ -129,13 +119,32 @@
 
       function drawChart() {
         var data = google.visualization.arrayToDataTable(
-          comments_array
+          [ ['Steve I feel Happy'],
+            ['James I feel OhYeah'],
+            ['Liz I feel Fucking@#$!!@#'],
+            ['I feel OhBoy'],
+            ['James I feel Happy'],
+            ['I feel OhYeah'],
+            ['Zoe I feel TERRIFIC'],
+            ['I feel OhBoy'],
+           ['Chris I feel OhYeah'],
+            ['I feel Fucking@#$!!@# what the $%## am I doing here?'],
+           ['ChrisW I feel OhYeah'],
+            ['I feel Fucking@#$!!@#'],
+            ['I feel like git does not like me'],
+             ['I feel like git is a black hole'],
+            ['I feel Happy, come along if you feel like '],
+            ['I feel like the world is mine'],
+            ['I feel TERRIFIC'],
+            ['I feel like today is the day'],
+           ['I feel like going on a wild ride'],
+          ]
         );
 
         var options = {
           wordtree: {
             format: 'implicit',
-            word: name
+            word: 'I feel'
           }
         };
 
@@ -145,14 +154,6 @@
     </script>
 
    <div id="wordtree_basic" style="width: 900px; height: 500px;margin-left:auto;margin-right:auto"></div>
-   
-
-
-    </div>
-  </div>
-
-
 
   </body> 
 </html>
-
